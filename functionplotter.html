@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+  <title>Project green planet</title>
+  <meta charset="utf-8" />
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+  <script src="function-plot.js"></script>
+  <script src="addition.js"></script>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+
+<body onload="plot();" style="background-color:lightgreen;">
+  <h2 class="heading2">Green planet</h2>
+  <div class="layer">
+  <section id="plotSettings">
+    <label for="xMin">xMin: </label> value: <input type=number id="xMin" value=-5 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="xMin">xMax: </label> value: <input type=number id="xMax" value=6.28 step=0.5 oninput="plot();">
+
+    <p></p>
+    <label for="yMin">yMin: </label> value: <input type=number id="yMin" value=-6 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="yMax">yMax: </label> value: <input type=number id="yMax" value=6 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="color">Color: </label> value: <input type=color id="color" onchange="plot();">
+    <p></p>
+    <label for="function">Formula used for calculation: </label>
+    <input id="function" type="text" value="(x/144.64)*2500" onchange="plot();" readonly>
+    <p></p>
+    <button onclick="plot();">Plot it!</button>
+
+  </section>
+
+  <section id="plot">
+    <div id="myFunction"></div>
+  </section>
+  </div>
+</body>
+<body onload="addNumbers();">
+  <section id="plotSettings">
+  Enter x = <input type="text" id="value1" name="value1" value="1"/>
+        <input type="button" name="Sumbit" value="Click here" onclick="javascript:addNumbers()"/>
+        <br>
+        The no of trees to be planted is = <input type="text" id="answer" name="answer" value=""/>
+        <br><br><br><br><br><br>
+        <text>*<b>x is the carbon dioxide released by the vehicles</text>
+        <br><br><br>
+        <text>*Y is number of trees required to be planted over 20 years</text>
+      </body>
+    </section>
+</html>
